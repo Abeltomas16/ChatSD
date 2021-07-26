@@ -54,10 +54,11 @@ height: 70vh;
     overflow: hidden;
     overflow-y: auto; 
 }
-#group-mensagem{
+#group-membros{
     height: 100vh !important;
     overflow: auto !important;
 }
+
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
 e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
@@ -73,3 +74,4 @@ e 10px de altura para a barra horizontal */
  ::-webkit-scrollbar-thumb {
      background: #007BFF;
 }
+
