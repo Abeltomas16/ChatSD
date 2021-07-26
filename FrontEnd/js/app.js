@@ -1,7 +1,8 @@
 const membrosActivos = document.querySelectorAll('.members-active.d-flex h5');
 const divMensagens = document.querySelector('#group-mensagem')
+const membros_activos = document.querySelectorAll('.members-active')
 const form = document.querySelector('form')
-const divMensagensEscritas=document.querySelector('#div-mensagens')
+const divMensagensEscritas = document.querySelector('#div-mensagens')
 const UsuarioCorrenteID = 123
 const mensagens = [
     {
