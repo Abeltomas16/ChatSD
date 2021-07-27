@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Projecto BackEnd para o chat da SD TEAM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abeltomas16/ChatSD.git"
+  },
+  "keywords": [
+    "Chat",
+    "SD",
+    "TEAM"
+  ],
+  "author": "Abel Tomás",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abeltomas16/ChatSD/issues"
+  },
+  "homepage": "https://github.com/Abeltomas16/ChatSD#readme"
+}
