@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/Abeltomas16/ChatSD/issues"
   },
-  "homepage": "https://github.com/Abeltomas16/ChatSD#readme"
+  "homepage": "https://github.com/Abeltomas16/ChatSD#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^4.6.0",
+    "socket.io": "^3.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
