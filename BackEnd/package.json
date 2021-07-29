@@ -4,7 +4,7 @@
   "description": "Projecto BackEnd para o chat da SD TEAM",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nodemon index.j"
   },
   "repository": {
     "type": "git",
