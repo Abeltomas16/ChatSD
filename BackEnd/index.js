@@ -8,13 +8,13 @@ var servicos = require('./app/Services/service')
 var mensagemService = require('./app/Services/sms')
 
 //Usando os presets
- app.set('view engine', 'ejs')
+app.set('view engine', 'ejs')
 app.set('views', './app/View')
 
 app.use(express.static('./Public'))
 app.use(express.urlencoded({ extended: true }))
-app.use(express.json()) 
-
+app.use(express.json())
+//Setando as verificações de seguranças
 app.use(helmet.contentSecurityPolicy());
 app.use(helmet.dnsPrefetchControl());
 app.use(helmet.expectCt());
@@ -49,7 +49,7 @@ io.on('connection', function (cliente) {
         if (indice !== -1) {
             cliente.emit('usuarioExistente', 'Já existe um usuário com este nome no chat')
         } else {
-            membro.nomeUsuario=membro.nomeUsuario.toLowerCase()
+            membro.nomeUsuario = membro.nomeUsuario.toLowerCase()
             service.Adicionar(membro)
             const usuarios = service.Listar()
             console.log('todos usuário', usuarios)
@@ -97,7 +97,7 @@ app.post('/send', (req, res) => {
     const emissor = req.body.emissor
     const receptor = req.body.receptor
     const conteudo = req.body.mensagem
-    const data=req.body.data
+    const data = req.body.data
     const sms = {
         emissor,
         receptor,
@@ -110,26 +110,26 @@ app.post('/send', (req, res) => {
     res.status(200).json(result)
 })
 //midleware principal
-app.use((req, res,next) => {
+app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     next();
 });
 
-app.post('/login',(req,res)=>{
-    const dados=req.body
-    const nome=dados.nome
-    const senha=dados.senha;
-    if(nome==="Abel" && senha ==="temp.123"){
+app.post('/login', (req, res) => {
+    const dados = req.body
+    const nome = dados.nome
+    const senha = dados.senha;
+    if (nome === "Abel" && senha === "temp.123") {
         res.status(200).end('Bem vindo senhor Toms')
-    }else{
+    } else {
         res.redirect('/')
     }
 })
-app.get('/', (req,res)=>{
+app.get('/', (req, res) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.render('main')
 })
-app.get('*', (req,res)=>{
+app.get('*', (req, res) => {
     res.redirect('/')
 })
 server.listen(3000, () => {
