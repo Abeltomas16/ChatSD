@@ -1,14 +1,14 @@
 <h1>CHAT SD TEAM - SMALL DEVELOPERS</h1>
 
-## :chat: ChatSD
+## :clipboard: ChatSD
 > App para funcionar no como chat no grupo de desenvolvimento SMALL DEVELOPERS
 
 ## :computer: Ferramentas
 
 Esse Chat foi desenvolvido com as seguintes ferramentas:
 
-- [ExpressJS](https://www.nodejs.org/)
-- [WebSocket](https://www.postgresql.org/)
+- [ExpressJS](https://www.expressjs.com/)
+- [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API)
 
 ## Licença
 
