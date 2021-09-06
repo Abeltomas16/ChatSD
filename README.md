@@ -1,6 +1,6 @@
 <h1>CHAT SD TEAM - SMALL DEVELOPERS</h1>
 
-## :chat: ChatSD
+## :clipboard: ChatSD
 > App para funcionar no como chat no grupo de desenvolvimento SMALL DEVELOPERS
 
 ## :computer: Ferramentas
