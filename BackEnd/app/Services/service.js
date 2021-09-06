@@ -1,16 +1,21 @@
-const PessoasActivas = []
 class membros {
+    #usuarios
+    constructor() {
+        this.#usuarios = []
+    }
     Adicionar(pessoa) {
-        PessoasActivas.push(pessoa)
-        return true;
+        this.#usuarios.push(pessoa)
     }
     Exluir(id) {
-        const indice = PessoasActivas.findIndex(e => e.id == id)
-        PessoasActivas.splice(indice, 1)
-        return true;
+        const indice = this.#usuarios.findIndex(e => e.id_socket == id)
+        this.#usuarios.splice(indice, 1)
     }
-    Listar(id) {
-        return PessoasActivas;
+    Listar() {
+        const lista = this.#usuarios.map(e => e)
+        return lista;
+    }
+    get(req, res) {
+        res.json(this.#usuarios)
     }
 }
-module.exports=membros
+module.exports = membros

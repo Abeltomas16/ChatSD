@@ -1,19 +1,29 @@
 const membros = [
-    { id: 1, nome: 'Abel' },
-    { id: 2, nome: 'Joao' },
-    { id: 3, nome: 'Tomás' },
-    { id: 4, nome: 'Gabriel' },
 ]
 const mensagens = [
-    { id: 1, conteudo: 'oi Abel', emissor: 2, receptor: 1 },
-    { id: 2, conteudo: 'como estás?', emissor: 1, receptor: 2 },
-    { id: 3, conteudo: 'Oi wy', emissor: 1, receptor: 3 },
-    { id: 4, conteudo: 'Como estás fella?', emissor: 3, receptor: 4 }
 ]
+exports.usuario = (req, res) => {
+    const nome = req.params.nome
+    const user = membros.find(e => e.nome == nome)
+    res.json(user)
+}
+exports.salvaSocket = (req, res) => {
+    console.log(req.body.id)
+    const id = parseInt(req.body.id)
+    const id_socket = req.body.id_socket
+    const indice = membros.findIndex(e => e.id == id)
+    const user = membros[indice]
+    const novoUsuario = {
+        ...user,
+        id_socket
+    }
+    membros[indice] = novoUsuario
+    res.json(membros)
+}
 exports.enviar = (req, res) => {
-    const emissor = req.params.emissor
-    const receptor = req.params.receptor
-    const conteudo = 'Oi aqui'
+    const emissor = parseInt(req.body.emissor)
+    const receptor = parseInt(req.body.receptor)
+    const conteudo = req.body.mensagem
     id = 5
     mensagens.push({
         id,
@@ -24,8 +34,9 @@ exports.enviar = (req, res) => {
     res.json(mensagens)
 }
 exports.getsmsporid = (req, res) => {
-    const emissor = req.params.emissor
-    const receptor = req.params.receptor
+    const emissor = req.params.emissor;
+    const receptor = req.params.receptor;
+    console.log(emissor)
     const result = mensagens
         .filter(e => (e.emissor == emissor && e.receptor == receptor
             || e.emissor == receptor && e.receptor == emissor))
@@ -33,6 +44,6 @@ exports.getsmsporid = (req, res) => {
     res.json(result)
 }
 exports.getmembers = (req, res) => {
-    console.log('veio')
-    res.json(membros)
+    const membrosActivos = membros.filter(e => e.id_socket !== null)
+    res.json(membrosActivos)
 }

@@ -1,0 +1,43 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Projecto FrontEnd para o chat SD TEAM",
+  "main": "index.js",
+  "scripts": {
+    "tranp": "node_modules/.bin/webpack",
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abeltomas16/ChatSD.git"
+  },
+  "keywords": [
+    "chat",
+    "ajmds",
+    "chat",
+    "sd",
+    "team"
+  ],
+  "author": "Abel Tomás",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abeltomas16/ChatSD/issues"
+  },
+  "homepage": "https://github.com/Abeltomas16/ChatSD#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.8",
+    "babel-polyfill": "^6.26.0",
+    "regenerator": "^0.14.7"
+  }
+}

@@ -4,7 +4,7 @@
   "description": "Projecto BackEnd para o chat da SD TEAM",
   "main": "index.js",
   "scripts": {
-    "build": "nodemon index.j"
+    "build": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/Abeltomas16/ChatSD#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "consign": "^0.1.6",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "helmet": "^4.6.0",
